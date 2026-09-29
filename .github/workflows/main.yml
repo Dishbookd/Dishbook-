@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
@@ -18,7 +18,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -36,9 +35,10 @@ jobs:
 
       - name: Build web app
         run: npm run build
-- name: Create Capacitor Android project
-  run: npx cap add android
-  
+
+      - name: Create Capacitor Android project
+        run: npx cap add android
+
       - name: Sync Capacitor Android
         run: npx cap sync android
 

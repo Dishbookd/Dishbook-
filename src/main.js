@@ -326,5 +326,41 @@ function addRecipe() {
   `;
 
   document.querySelector('#back').onclick = home;
+  onsubmit = async e => {
+  e.preventDefault();
 
-  document.querySelector('#recipeForm').
+  const msg = document.querySelector('#formMessage');
+  msg.textContent = 'Publishing...';
+
+  const { error } = await supabase.from('recipes').insert({
+    user_id: user.id,
+    title: document.querySelector('#title').value.trim(),
+    description: document.querySelector('#description').value.trim(),
+    category: document.querySelector('#category').value,
+    image_url: document.querySelector('#image_url').value.trim(),
+    ingredients: document.querySelector('#ingredients').value.trim(),
+    instructions: document.querySelector('#instructions').value.trim()
+  });
+
+  if (error) {
+    msg.textContent = error.message;
+    return;
+  }
+
+  await loadRecipes();
+  home();
+};
+
+}
+
+async function start() {
+  await loadUser();
+  await loadRecipes();
+  home();
+}
+
+supabase.auth.onAuthStateChange((_event, session) => {
+  user = session?.user || null;
+});
+
+start();

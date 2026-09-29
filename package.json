@@ -1,0 +1,17 @@
+{
+  "name": "dishbook",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@capacitor/android": "6.2.1",
+    "@capacitor/core": "6.2.1",
+    "@supabase/supabase-js": "2.57.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "6.2.1",
+    "vite": "6.1.0"
+  }
+}

@@ -1,0 +1,28 @@
+APP NAME
+DishBook
+
+SHORT DESCRIPTION
+Discover, cook and share delicious recipes.
+
+FULL DESCRIPTION
+DishBook is a simple recipe-sharing app for discovering delicious food and sharing your own recipes.
+
+Features:
+• Browse recipes
+• Search by recipe name
+• Explore food categories
+• View ingredients and cooking instructions
+• Publish your own recipes
+• Mobile-friendly experience
+
+PACKAGE ID
+com.dishbook.app
+
+CATEGORY
+Food & Drink
+
+CONTENT RATING
+Complete the Google Play content rating questionnaire based on the final app.
+
+CONTACT
+Replace this section with your support email before publishing.
